@@ -54,7 +54,6 @@ def insert_json_db(data_path_json,db):
 
     for file_path in tqdm(data_json_files[0:]):
         file_name = os.path.join(data_path_json, file_path)
-        print(file_path)
         data_json_get_document = {}
 
         # FILE_ID -----------------------------------------------------

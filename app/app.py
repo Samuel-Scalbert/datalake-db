@@ -34,12 +34,10 @@ def init_db():
 init_db()  # Call the init_db function to initialize the db variable
 
 insert_json_db('./app/data/json_files/', db)
-structure = None
-global data_dashboard
-data_dashboard = None
-#data_dashboard = dashboard(db, structure)
+
+from app.routes import api_doc_to_mention
 
 @app.route('/')
 def home():
-    return "test"
+    return ""
 
