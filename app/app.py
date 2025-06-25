@@ -20,8 +20,8 @@ def init_db():
         username=app.config['ARANGO_USERNAME'],
         password=app.config['ARANGO_PASSWORD']
     )
-    if not db.hasDatabase('SOF-viz'):
-        db.createDatabase('SOF-viz')
+    if not db.hasDatabase('Datalake-DB'):
+        db.createDatabase('Datalake-DB')
     db = Connection(
         arangoURL='http://{host}:{port}'.format(
             host=app.config['ARANGO_HOST'],

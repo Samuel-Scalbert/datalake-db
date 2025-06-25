@@ -77,6 +77,7 @@ def insert_json_db(data_path_json,db):
                     if mention['software-name']['normalizedForm'] not in blacklist:
                         mention['software_name'] = mention.pop('software-name')
                         mention['software_type'] = mention.pop('software-type')
+                        mention['hal_validated'] = "false"
                         software_document = softwares_collection.createDocument(mention)
                         software_document.save()
 
